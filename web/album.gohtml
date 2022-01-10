@@ -1,0 +1,41 @@
+<div>
+	<div class="info-album">
+		<img
+			src={{.Cover}}
+		/>
+		<h1>{{.Name}}</h1>
+		<h3>by The Beatles</h3>
+		<span>{{.Year}}</span>
+		<!-- <h3>The Beatles</h3>
+        <h3>The Beatles</h3>
+        <p>The Beatles</p> -->
+	</div>
+	<ul class="list-nav">
+		<li>Track list</li>
+		<li>Comments</li>
+	</ul>
+</div>
+<div class="content-view">
+	<section>
+		<h2>Track list</h2>
+		<div class="grid-table" id="track-list">
+			<div>
+				<h3>#</h3>
+				<h3>Title</h3>
+				<h3>Duration</h3>
+				<h3>=</h3>
+			</div>
+			{{range .TrackList}}
+				<div>
+					<span>{{.TrackNum}}</span>
+					<span>{{.Title}}</span>
+					<span>{{time2txt .Length}}</span>
+					<span>=</span>
+				</div>
+			{{end}}
+		</div>
+	</section>
+	<section>
+		<h2>Comments</h2>
+	</section>
+</div>

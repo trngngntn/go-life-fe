@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" href="/assets/css/frame.css" />
+		<title></title>
+	</head>
+	<body>
+		<nav class="bar-horizontal">
+			<div>
+				<div class="button-onbar">LIFE</div>
+				<div class="button-onbar">Library</div>
+			</div>
+			<div>
+				<input
+					type="text"
+					id="input-search"
+					placeholder="Search here"
+				/>
+				<button>search</button>
+			</div>
+			<div>Drop</div>
+		</nav>
+		<main>
+			<div id="page-view">{{.}}</div>
+			<div></div>
+		</main>
+		<div class="bar-horizontal">
+			<div class="control-area">
+				<button class="icon-font">skip_previous</button>
+				<button class="icon-font">play_arrow</button>
+				<button class="icon-font">skip_next</button>
+				<div></div>
+				<button class="icon-font">volume_up</button>
+				<div class="slider"></div>
+			</div>
+			<div
+				style="
+					display: grid;
+					grid-template-columns: 5ch 1fr 5ch;
+					column-gap: 2rem;
+					align-items: center;
+				"
+			>
+				<h4 class="number">00:00</h4>
+				<div class="slider"></div>
+				<h4 class="number">99:99</h4>
+			</div>
+			<div class="control-area" style="flex-direction: row-reverse">
+				<button class="icon-font">queue_music</button>
+				<button class="icon-font">shuffle</button>
+				<button class="icon-font">repeat</button>
+				<div
+					style="
+						width: 100%;
+						padding-bottom: 0.2rem;
+						overflow: hidden;
+					"
+				>
+					<b>Here Comes the Sun</b>
+					<h4>by The Beatles</h4>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
